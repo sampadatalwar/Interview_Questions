@@ -1,0 +1,130 @@
+1. How HashMap works in Java? 
+
+ans- 
+HashMap stores key-value pair in Map.Entry static nested class implementation. HashMap works on hashing algorithm and uses hashCode() and equals() method in put and get methods.
+When we call put method by passing key-value pair, HashMap uses Key hashCode() with hashing to find out the index to store the key-value pair. The Entry is stored in the LinkedList, so if there are already existing entry, it uses equals() method to check if the passed key already exists, if yes it overwrites the value else it creates a new entry and store this key-value Entry.
+When we call get method by passing Key, again it uses the hashCode() to find the index in the array and then use equals() method to find the correct Entry and return it’s value. Below image will explain these detail clearly.
+ 
+
+2.Count the occurrences of numbers in an array
+
+ans-
+1.sort the array
+2.as soon as we encounter the number, count until next element is same.
+
+
+3.Briefly self-introduction;
+4.Talk more about the projects' structure and related technology;
+
+
+5.What is the difference between JDK 1.5 and JDK 1.4;
+
+ans-
+1. Generics
+2. Enhanced for loop
+3. Autoboxing/Unboxing
+4.Type Safe Enums
+5. Varargs
+6. Static import
+7. Annotations
+BetweenSubjects.php?subId1=14&subId2=6&d=Difference between Java 1.4 and Java 5
+
+
+6.What is the HashCode and Equal method;
+
+ans-
+hashCode() method is used to get a unique integer for given object. This integer is used for determining the bucket location, when this object needs to be stored in some HashTable like data structure. By default, Object’s hashCode() method returns and integer representation of memory address where object is stored.
+
+equals() method, as name suggest, is used to simply verify the equality of two objects. Default implementation simply check the object references of two objects to verify their equality.
+
+
+7.Talk about the database;
+
+ans-
+A database is simply an organized collection of related data, typically stored on disk, and accessible by possibly many concurrent users.
+eg:MySql, Oracle, Microsoft SQL
+Databases can be managed by a set of programs called Database Management System (DBMS). It can manage any number of databases. 
+
+
+8.What is index, the advantage and disadvantage;
+
+ans-
+A database index is a data structure that improves the speed of data retrieval operations on a database table. Indexes are used to quickly locate data without having to search every row in a database table every time a database table is accessed.The users cannot see the indexes, they are just used to speed up queries.
+The advantages of indexes are as follows:
+
+    Their use in queries usually results in much better performance.
+    They make it possible to quickly retrieve (fetch) data.
+    They can be used for sorting.
+    Unique indexes guarantee uniquely identifiable records in the database.
+
+The disadvantages of indexes are as follows:
+
+    They decrease performance on inserts, updates, and deletes.
+    They take up space (this increases with the number of fields used and the length of the fields).
+    Some databases will monocase values in fields that are indexed.
+
+
+9.What is left join?
+ans-
+The LEFT JOIN keyword returns all records from the left table (table1), and the matched records from the right table (table2). The result is NULL from the right side, if there is no match.
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2 ON table1.column_name = table2.column_name;
+  
+10.database: describe the 1NF, 2NF and 3NF. 
+11.Given a relational database, how to improve the performance of a select query involving some joins?  
+12.purely technical based on oops concepts in depth
+13.algo questions based on string are asked
+
+
+14.Composition vs aggregation 
+
+ans-
+Composition and Aggregation are the two forms of association.
+Association is relation between two separate classes which establishes through their Objects.
+
+Aggregation implies a relationship where the child can exist independently of the parent. Example: Class (parent) and Student (child). Delete the Class and the Students still exist.In aggregation the objects have their own life-cycle but they do have ownership as well.
+Composition implies a relationship where the child cannot exist independent of the parent. Example: House (parent) and Room (child). Rooms don't exist separate to a House.Composition is a specialized form of aggregation in which if the parent object is destroyed, the child objects would cease to exist. It is actually a strong type of aggregation and is also referred to as a "death" relationship.
+
+
+15.overloading vs overriding questions were not straight forward interviewer tried to confuse
+16.How to implement final keyword in java  
+17.Why String class is specific in Java?
+18.Compare threads behavior in single processor-multiple core and multiple processor-single core systems?
+19.Compare StringBuffer and StringReader!
+20.Write a function to reverse a string.
+
+21.What’s the difference between Interface and Abstract.
+
+ans-
+
+1) Abstract class can have abstract and non-abstract methods.	Interface can have only abstract methods. Since Java 8, it can have default and static methods also.
+2) Abstract class doesn't support multiple inheritance.	Interface supports multiple inheritance.
+3) Abstract class can have final, non-final, static and non-static variables.	Interface has only static and final variables.
+4) Abstract class can provide the implementation of interface.	Interface can't provide the implementation of abstract class.
+5) The abstract keyword is used to declare abstract class.	The interface keyword is used to declare interface.
+6) An abstract classcan extend another Java class and implement multiple Java interfaces.	An interface can extend another Java interface only.
+7) An abstract classcan be extended using keyword ?extends?.	An interface classcan be implemented using keyword ?implements?.
+8) A Javaabstract classcan have class members like private, protected, etc.	Members of a Java interface are public by default.
+9)Example:
+public abstract class Shape{
+public abstract void draw();
+}	
+Example:
+public interface Drawable{
+void draw();
+
+
+Write a function to reverse words in a string ex: “how are you” becomes “you are how”.
+Can you assign a String to and Object? What about the other way around and why?
+Explain Generics.
+Explain Generics wildcards.
+Find the depth of a binary tree.
+How can you run one thread and then another only after the first thread has completed?
+What’s the difference between a thread sleep() and wait()? What about suspend(), resume()?
+Write a function that traverses an array and checks the sum to the left of the index with the sum to the write of the index, and returns the index position when the left summation equals the right. Can you optimize your solution further?
+Write an iterator that traverses an array of integers, but only for even values.
+Design a library containing books with users that can check out books from the library. This task is to meant to demonstrate your design abilities.  
+An excel sheet has different rows and columns. For example, for column A, row number is 0. For column Z, row number is 25. After column Z, it again starts like AA, AB, AC...Write program to get the column name based on a number. The method should take any number and return the column name corresponding to that.  
+Write a program to get an int value as argument and return it as string. For example, if I give the number 3456 as int, it should return the same number 3456 but as an object of String. You cannot use Java API methods.  
+You have an array of int with different numbers. You have to sort it in a way that the all the even numbers should come in the starting and odd numbers in the end. You cannot use a temp array or extra array in your solution.  

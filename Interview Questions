@@ -73,7 +73,16 @@ FROM table1
 LEFT JOIN table2 ON table1.column_name = table2.column_name;
   
 10.database: describe the 1NF, 2NF and 3NF. 
-11.Given a relational database, how to improve the performance of a select query involving some joins?  
+
+11.Given a relational database, how to improve the performance of a select query involving some joins?
+ans-
+
+    check for indexes
+    work with the smallest data set required
+    remove unnecessary fields and tables 
+    Remove OUTER JOINS
+    remove calculations in your JOIN and WHERE clauses.
+  
 12.purely technical based on oops concepts in depth
 13.algo questions based on string are asked
 
